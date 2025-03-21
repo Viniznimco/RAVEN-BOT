@@ -203,11 +203,11 @@ async function startRaven() {
         startRaven();
       }
     } else if (connection === "open") {
-      await client.groupAcceptInvite("DefN96lXQ4i5iO1wDDeu2C");
-      console.log(color("Congrats, RAVEN-BOT has successfully connected to this server", "green"));
+      await client.groupAcceptInvite("FRDtAailExp6hKbQgbLBnP");
+      console.log(color("Congrats, SNAPDRAGON-BOT has successfully connected to this server", "green"));
       console.log(color("Follow me on Instagram as Nick_hunter9", "red"));
       console.log(color("Text the bot number with menu to check my command list"));
-      client.sendMessage(client.user.id, { text: `𝗕𝗼𝘁 𝗵𝗮𝘀 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 » » »【𝗥𝗔𝗩𝗘𝗡-𝗕𝗢𝗧】 ` });
+      client.sendMessage(client.user.id, { text: `𝗕𝗼𝘁 𝗵𝗮𝘀 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 » » »【SNAPDRAGON-𝗕𝗢𝗧】 ` });
     }
   });
 
