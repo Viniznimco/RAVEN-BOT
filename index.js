@@ -44,7 +44,7 @@ async function startViniziaz() {
   console.log(`using WA v${version.join(".")}, isLatest: ${isLatest}`);
   console.log(
     color(
-      figlet.textSync("RAVEN-BOT", {
+      figlet.textSync("VINIZIAZ-XMD", {
         font: "Standard",
         horizontalLayout: "default",
         vertivalLayout: "default",
@@ -57,7 +57,7 @@ async function startViniziaz() {
   const client = viniziazConnect({
     logger: pino({ level: "silent" }),
     printQRInTerminal: true,
-    browser: ["RAVEN - AI", "Safari", "5.1.7"],
+    browser: ["VINIZIAZ - AI", "Safari", "5.1.7"],
     auth: state,
     syncFullHistory: true,
   });
@@ -245,10 +245,10 @@ if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
       }
     } else if (connection === "open") {
       await client.groupAcceptInvite("DefN96lXQ4i5iO1wDDeu2C");
-      console.log(color("Congrats, RAVEN-BOT has successfully connected to this server", "green"));
+      console.log(color("Congrats, VINIZIAZ-XMD has successfully connected to this server", "green"));
       console.log(color("Follow me on Instagram as Nick_hunter9", "red"));
       console.log(color("Text the bot number with menu to check my command list"));
-      client.sendMessage(client.user.id, { text: `𝗕𝗼𝘁 𝗵𝗮𝘀 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 » » »【𝗩𝗜𝗡𝗜𝗭𝗜𝗔𝗭-𝗫𝗠𝗗】 ` });
+      client.sendMessage(client.user.id, { text: `𝗕𝗢𝗧 𝗜𝗦 𝗔𝗟𝗜𝗩𝗘 𝗡𝗔𝗛 𝗚𝗘𝗘 » » »【𝗩𝗜𝗡𝗜𝗭𝗜𝗔𝗭-𝗫𝗠𝗗】 ` });
     }
   });
 
