@@ -1,7 +1,7 @@
 /* If it works, don't  Fix it */
 
 const {
-  default: ravenConnect,
+  default: viniziazConnect,
   useMultiFileAuthState,
   DisconnectReason,
   fetchLatestBaileysVersion,
@@ -29,15 +29,15 @@ const messageDelay = 5000;
 const event = require('./action/events');
 const authenticationn = require('./action/auth');
 const PhoneNumber = require("awesome-phonenumber");
-const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/ravenexif');
-const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/ravenfunc');
+const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/viniziazexif');
+const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/viniziazfunc');
 const { sessionName, session, autobio, autolike, port, mycode, anticall, antiforeign, packname, autoviewstatus } = require("./set.js");
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
 const color = (text, color) => {
   return !color ? chalk.green(text) : chalk.keyword(color)(text);
 };
 
-async function startRaven() {
+async function startViniziaz() {
                  await authenticationn();  
   const { state, saveCreds } = await useMultiFileAuthState("session");
   const { version, isLatest } = await fetchLatestBaileysVersion();
@@ -54,7 +54,7 @@ async function startRaven() {
     )
   );
 
-  const client = ravenConnect({
+  const client = viniziazConnect({
     logger: pino({ level: "silent" }),
     printQRInTerminal: true,
     browser: ["RAVEN - AI", "Safari", "5.1.7"],
@@ -95,8 +95,8 @@ async function startRaven() {
             
 if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
       let m = smsg(client, mek, store);
-      const raven = require("./raven");
-      raven(client, m, chatUpdate, store);
+      const viniziaz = require("./viniziaz");
+      viniziaz(client, m, chatUpdate, store);
     } catch (err) {
       console.log(err);
     }
@@ -223,10 +223,10 @@ if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
         process.exit();
       } else if (reason === DisconnectReason.connectionClosed) {
         console.log("Connection closed, reconnecting....");
-        startRaven();
+        startViniziaz();
       } else if (reason === DisconnectReason.connectionLost) {
         console.log("Connection Lost from Server, reconnecting...");
-        startRaven();
+        startViniziaz();
       } else if (reason === DisconnectReason.connectionReplaced) {
         console.log("Connection Replaced, Another New Session Opened, Please Restart Bot");
         process.exit();
@@ -235,20 +235,20 @@ if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
         process.exit();
       } else if (reason === DisconnectReason.restartRequired) {
         console.log("Restart Required, Restarting...");
-        startRaven();
+        startViniziaz();
       } else if (reason === DisconnectReason.timedOut) {
         console.log("Connection TimedOut, Reconnecting...");
-        startRaven();
+        startViniziaz();
       } else {
         console.log(`Unknown DisconnectReason: ${reason}|${connection}`);
-        startRaven();
+        startViniziaz();
       }
     } else if (connection === "open") {
       await client.groupAcceptInvite("DefN96lXQ4i5iO1wDDeu2C");
       console.log(color("Congrats, RAVEN-BOT has successfully connected to this server", "green"));
       console.log(color("Follow me on Instagram as Nick_hunter9", "red"));
       console.log(color("Text the bot number with menu to check my command list"));
-      client.sendMessage(client.user.id, { text: `𝗕𝗼𝘁 𝗵𝗮𝘀 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 » » »【𝗥𝗔𝗩𝗘𝗡-𝗕𝗢𝗧】 ` });
+      client.sendMessage(client.user.id, { text: `𝗕𝗼𝘁 𝗵𝗮𝘀 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 » » »【𝗩𝗜𝗡𝗜𝗭𝗜𝗔𝗭-𝗫𝗠𝗗】 ` });
     }
   });
 
@@ -291,7 +291,7 @@ if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
     let type = '', mimetype = mime, pathFile = filename;
     if (options.asDocument) type = 'document';
     if (options.asSticker || /webp/.test(mime)) {
-      let { writeExif } = require('./lib/ravenexif.js');
+      let { writeExif } = require('./lib/viniziazexif.js');
       let media = { mimetype: mime, data };
       pathFile = await writeExif(media, { packname: packname, author: packname, categories: options.categories ? options.categories : [] });
       await fs.promises.unlink(filename);
@@ -394,7 +394,7 @@ app.use(express.static("pixel"));
 app.get("/", (req, res) => res.sendFile(__dirname + "/index.html"));
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 
-startRaven();
+startViniziaz();
 
 let file = require.resolve(__filename);
 fs.watchFile(file, () => {
