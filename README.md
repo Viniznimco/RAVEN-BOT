@@ -1,6 +1,6 @@
 # 𝗥𝗔𝗩𝗘𝗡-𝗕𝗢𝗧
 <div align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THIS  IS+RAVEN-MD;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+NICK;PUBLIC+RELEASED; ...;TEAM RAVEN-𝙼𝙳." alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=1BAFBAFF&center=true&width=910&height=100&lines=THIS  IS+RAVEN-MD;MULTI+DEVICE+WHATSAPP+BOT;CODED+BY+NICK;PUBLIC+RELEASED; ...;TEAM RAVEN-𝙼𝙳." alt="Typing SVG" /></a>
   </p>
   
 <p align="center">
@@ -21,11 +21,11 @@
 </p>
  
 
-## ```CONTACT ME```
+## ` Contact me`
 
 <p align="center">
 
-<a href="https://api.whatsapp.com/send?phone=254114660061&text=Hello+N꙰i꙰c꙰k꙰༆"><img src="https://img.shields.io/badge/Contact 𝗡𝗜𝗖𝗞༆-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="https://api.whatsapp.com/send?phone=254114660061&text=Hello+Raven+dev+i+need+your+Help+on..."><img src="https://img.shields.io/badge/Contact-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 
 ***This bot is created with the help of NodeJS and uses [Baileys](https://github.com/whiskeysockets/Baileys)***
@@ -45,15 +45,15 @@ Our AI features use random APIs to run, so sometimes they may be down.
 <p align="centre">
 <a href="https://github.com/HunterNick2/RAVEN-BOT/fork"><img src="https://img.shields.io/badge/Fork%20Create-purple?style=for-the-badge&logo=github" alt="FORK RAVEN-BOT" width="160"></a>
 <p/>
+
   
-Linking/Pairing:
 ## ` Pair onrender`
 <p align="centre">
 <a href="https://pairing-raven.onrender.com"><img height= "37" title="Author" src="https://img.shields.io/badge/Session-green?style=for-the-badge&logo=render"></a>
 <p/>
             
 
-###  𝗗𝗘𝗣𝗟𝗢𝗬 𝗢𝗡 𝗛𝗘𝗥𝗢𝗞𝗨:
+###  ` Deploy On Heroku`
 
 
  ***[![Tap to deploy on heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?button-url=https://github.com/HunterNick2/RAVEN-BOT&template=https://github.com/HunterNick2/RAVEN-BOT.git)***
